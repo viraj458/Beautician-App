@@ -9,10 +9,6 @@ const CustomerSchema = new Schema({
         required: [true, 'Name field is required'],
         
     },
-    business_license_number:{
-        type:String,
-        required: false
-    },
     create_data:{
         type: Date,
         default: Date.now
