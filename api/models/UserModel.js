@@ -9,22 +9,22 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
     name:{
         type:String,
-        requires: [true, 'Name field is required'],
+        required: [true, 'Name field is required'],
         maxlength: 100
     },
     email:{
         type:String,
-        requires: [true, 'Email field is required'],
+        required: [true, 'Email field is required'],
         unique: true
     },
     username:{
         type:String,
-        requires: [true, 'Username field is required'],
+        required: [true, 'Username field is required'],
         unique: true
     },
     password:{
         type:String,
-        requires: [true, 'Password field is required'],
+        required: [true, 'Password field is required'],
         minlength: 8
     },
     role:{
