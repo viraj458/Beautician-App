@@ -24,6 +24,16 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json())
 
 
+
+const v1 = require('./api/routes')
+app.use('/api/v1/', v1.router)
+
+
+app.use((req,res)=>{
+    res.status(404).send({url: req.originalUrl + ' not found!'})
+})
+
+
 app.listen(port, ()=>{
     console.log(`connected to ${port}`)
 })
