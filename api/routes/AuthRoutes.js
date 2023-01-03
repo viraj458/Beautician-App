@@ -1,5 +1,8 @@
 module.exports = function (app) {
-    const AuthController = require('../controllers/AuthController')
+    const {registerUser, loginUser} = require('../controllers/AuthController')
 
-    app.post('/register', AuthController.registerUser)
+    app.post('/register', registerUser)
+    app.post('/login', loginUser)
+
+
 }
